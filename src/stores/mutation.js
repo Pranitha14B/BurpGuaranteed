@@ -1,5 +1,5 @@
-export default{
-    searchIconClicked:(state,value)=>{
-        state.value = isSearchIconClicked;
-    }
-}
+export default {
+  searchIconClicked: (state, value) => {
+    state.isSearchIconClicked = value;
+  },
+};

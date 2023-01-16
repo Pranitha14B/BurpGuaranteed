@@ -1,3 +1,3 @@
-export default{
-    isSearchIconClicked:false,
-}
+export default {
+  isSearchIconClicked: false,
+};

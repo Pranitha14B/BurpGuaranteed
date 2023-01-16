@@ -3,7 +3,8 @@ import state from "./stores/state.js";
 import mutation from "./stores/mutation.js";
 
 export default new Vuex.Store({
-    strict: true,
-    state,
-    mutation,
-})
+  namespaced: true,
+  strict: true,
+  state,
+  mutation,
+});
