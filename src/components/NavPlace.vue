@@ -64,13 +64,19 @@ export default {
   grid-area: 1 / 1 / 2 / 2;
   display: flex;
   flex-direction: row;
+  margin-inline: auto;
+
 }
 .home {
   grid-area: 1 / 2 / 2 / 3;
+  margin-inline: auto;
+
 }
 
 .about {
   grid-area: 1 / 3 / 2 / 4;
+    margin-inline: auto;
+
 }
 .menu a,
 .home a,
@@ -81,10 +87,14 @@ export default {
 }
 .menu {
   grid-area: 1 / 4 / 2 / 5;
+  margin-inline: auto;
+
 }
 
 .login {
   grid-area: 1 / 5 / 2 / 6;
+    margin-inline: auto;
+
 }
 .bar {
   grid-area: 1 / 2 / 2 / 3;
@@ -94,6 +104,7 @@ export default {
   padding-top: 35px;
   font-family: cursive;
   font-size: 20px;
+
 }
 .icon {
   grid-area: 1 / 1 / 2 / 2;
