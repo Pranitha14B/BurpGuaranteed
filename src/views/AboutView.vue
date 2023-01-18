@@ -1,18 +1,44 @@
+<script>
+export default {
+  name: "AboutView",
+  computed: {
+    imageSlide() {
+      return [
+        {id:0,url:"./src/assets/pic1.jpg"},
+        {id:1,url:"./src/assets/pic2.jpg"},
+        {id:2,url:"./src/assets/pic3.jpg"},
+        {id:3,url:"./src/assets/pic4.jpg"},
+        {id:4,url:"./src/assets/pic5.jpg"}
+      ];
+    },
+  },
+  updated: {
+    
+    },
+   
+  
+  method:{
+    slideShow(){
+        let i;
+        for(i=0;i<this.imageSlide.length;i++){
+          let x=document.getElementsByClassName(`image${i}`);
+          x[i].style.display=none;
+        }
+    }
+  }
+};
+</script>
 <template>
   <div class="about">
     <div class="head">About Us</div>
-    <div class="story">
-      <p>
-        We started this cloud kitchen so that people who are not getting enough
-        food because of manoj who always likes my food and eats everything i
-        cook and became fat and gaines 120kgs so i thought y to make him alone
-        fat and y not all so i with my team mate manoj . So we decided to build
-        a diet based cloud kitchen for people whowish to become fat or loose
-        weight. We have multiple diet foods that are never compromised in taste,
-        quality and quantity.
-      </p>
+    <div class="slideshow">
+      <img v-for="image in imageSlide" :key="image.id" :src="image.url" :class="`image${image.id.toString()}`" />
     </div>
   </div>
 </template>
 
-<style></style>
+<style>
+img {
+  max-width: 100%;
+}
+</style>
